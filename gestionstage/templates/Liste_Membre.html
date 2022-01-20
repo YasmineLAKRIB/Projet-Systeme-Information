@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"
+ <title> Membres</title>
+</head>
+<body>
+    <h1>Liste des membres d'organismes</h1>
+    <table>
+        <tr>
+         <th>Nom Membre </th>
+         <th>PrenomMembre</th>
+         <th>poste</th>
+         <th>Organisme</th>
+         <th>Stage</th>
+         <th>codeJury</th>
+        </tr>
+       {%for item in Membre%}
+        <tr>
+         <td>{{item.nomM}}{{item.prenomM}}{{item.poste}}{{item.organisme.nomOrganisme}}{{item.stage.titreStage}}{{item.stage.typeStage}}{{item.codeJ}}</td>
+        </tr>
+        {% endfor %}
+       </table>
+</body>
+</html>
+

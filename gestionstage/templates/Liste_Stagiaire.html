@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"
+ <title>Stagiaires</title>
+</head>
+<body>
+    
+    <h1>Liste des stagiaires</h1>
+    <table>
+        <tr>
+         <th>nom </th>
+         <th>prenom</th>
+         <th>DateNaissance</th>
+         <th>Email</th>
+         <th>Année d'etude</th>
+         <th>Stage</th>
+        </tr>
+       {%for item in stagiaire%}
+        <tr>
+         <td>{{item.noms}}{{item.prenoms}}{{item.DateNaissance}}{{item.Email}}{{item.annedEude}}{{item.stage.titreStage}}{{item.stage.typeStage}}</td>
+        <!-- <td>{{item.Enseignant.nomE}}{{item.Enseignant.prenomE}}{{item.Enseignant.grade}}{{item.Enseignant.codeJ}}</td>-->
+        </tr>
+        {% endfor %}
+       </table>
+</body>
+</html>
+
+

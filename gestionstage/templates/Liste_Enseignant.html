@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet"  href="stage.css">
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"
+ <title>Enseignants</title>
+</head>
+<body>
+    <form method='GET'>
+        <label>Chercher l'Enseignant </label>
+        <input placeholder="recherche" type="search" name='search'>
+        <button type='Submit'>Recherche</button>
+    </form>
+    <h1> Resultats_de_recherche </h1>
+    <ul> 
+        {% for Enseignants in Enseignants%}
+            <li>Nom de l'Enseignant:{{Enseignants.nomE}}, son prenom: {{Enseignants.prenomE}},</li>
+        {% endfor %}
+    </ul>
+
+    <h1>Liste des Enseignants</h1>
+    <table>
+        <tr>
+         <th>nomE </th>
+         <th>prenomE</th>
+         <th>grade</th>
+         <th>codeJ</th>
+        </tr>
+       {%for item in Enseignant%}
+        <tr>
+         <td>{{item.nomE}}{{item.prenomE}}{{item.grade}}{{item.codeJ}}</td>
+        <!-- <td>{{item.Enseignant.nomE}}{{item.Enseignant.prenomE}}{{item.Enseignant.grade}}{{item.Enseignant.codeJ}}</td>-->
+        </tr>
+        {% endfor %}
+       </table>
+</body>
+</html>
+
+
